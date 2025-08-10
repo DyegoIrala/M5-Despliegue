@@ -20,13 +20,15 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+        working-directory: M5-DESPLIEGUE
 
       - name: Build Angular app
         run: npm run build -- --prod
+        working-directory: M5-DESPLIEGUE
 
       - name: Deploy to Firebase Hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseToken: ${{ secrets.FIREBASE_TOKEN }}
-          projectId: m5-despliegue-u  # asegúrate que sea el ID correcto
+          projectId: m5-despliegue-u
