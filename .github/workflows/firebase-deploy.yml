@@ -24,7 +24,7 @@ jobs:
 
 
       - name: Build Angular app
-        run: npm run build -- --prod
+        run: npm run build -- --configuration production
         working-directory: M5-Despliegue
 
 
