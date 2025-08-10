@@ -7,7 +7,7 @@ import { LikeButtonComponent } from "./like-button/like-button.component";
   selector: 'app-root',
   imports: [RouterOutlet, TestSaludoComponent, LikeButtonComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'M5-Despliegue';
