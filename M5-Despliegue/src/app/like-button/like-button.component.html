@@ -1,0 +1,5 @@
+<button (click)="toggleLike()" [class.liked]="liked">
+  <span *ngIf="liked">👍</span>
+  <span *ngIf="!liked">👎</span>
+  Me gusta {{ likeCount }}
+</button>
