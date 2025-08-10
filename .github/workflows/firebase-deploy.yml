@@ -16,17 +16,21 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: '20'
 
       - name: Install dependencies
         run: npm ci
+        working-directory: M5-Despliegue
 
       - name: Build Angular app
-        run: npm run build -- --prod
+        run: npm run build -- --configuration production
+        working-directory: M5-Despliegue
 
       - name: Deploy to Firebase Hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseToken: ${{ secrets.FIREBASE_TOKEN }}
-          projectId: your-firebase-project-id
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          projectId: m5-despliegue-u
+          entryPoint: M5-Despliegue
+          channelId: live

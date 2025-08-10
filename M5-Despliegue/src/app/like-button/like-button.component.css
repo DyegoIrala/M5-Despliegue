@@ -1,0 +1,24 @@
+button {
+  font-size: 1.2rem;
+  padding: 0.5rem 1.2rem;
+  cursor: pointer;
+  border: 2px solid #0d6efd;
+  border-radius: 8px;
+  background-color: white;
+  color: #0d6efd;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background-color: #0d6efd;
+  color: white;
+  box-shadow: 0 0 10px rgba(13, 110, 253, 0.7);
+}
+
+button.liked {
+  background-color: #0b5ed7;
+  color: white;
+  border-color: #0b5ed7;
+  box-shadow: 0 0 12px rgba(11, 94, 215, 0.8);
+  font-weight: bold;
+}
